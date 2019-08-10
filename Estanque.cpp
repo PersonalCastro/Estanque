@@ -23,7 +23,7 @@ int main () {
 
 	cout << "Se pone el algoritmo para que ordene el vector y se mide el tiempo de proceso." << endl;
 
-	cout << "Sacamos por pantalla el vector (el resultado)."  endl;
+	cout << "Sacamos por pantalla el vector (el resultado)." << endl;
 
 	cout << "Comprobamos si hay algun error poniendo en verde lo que este bien y en rojo lo que no." << endl;
 

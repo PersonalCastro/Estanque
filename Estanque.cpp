@@ -16,6 +16,7 @@
  */
 
 #include <iostream>
+#include <stdlib.h> //rand();
 
 #define restaurar "\033[1;0m"
 #define debug "\033[1;31m"
@@ -24,6 +25,12 @@
 
 using namespace std;
 
+/**
+ * @brief Procedimiento que genera numeros aleatorios al vector
+ * @param El vector ya mencionado
+ * @param Su dimensión
+ */
+void randomVGenerator( int * vector, int dim);
 
 /**
  * @brief Procedimiento que comprueba el estado final del vector para saber si esta bien ordenado
@@ -43,11 +50,8 @@ int main () {
 	int * vector;
 	vector = new int [dim];
 
-	vector[0] = 2;
-	vector[1] = 0;
-	vector[2] = -2;
-
 	cout << "Se procede a crear un vector aleatorio con un tamaño predeterminado." << endl;
+	randomVGenerator(vector, dim);
 
 	cout << "Se pone el algoritmo para que ordene el vector y se mide el tiempo de proceso." << endl;
 
@@ -58,6 +62,16 @@ int main () {
 
 }
 
+
+void randomVGenerator( int * vector, int dim){
+
+//	cout << debug << "Debug: randomVGenerator()" << restaurar << endl;
+
+    for (int i = 0; i < dim; i++){
+
+        vector[i] = rand() % 100 + 1;;
+    }
+}
 
 void checking (int * vector, int dim) {
 
@@ -78,3 +92,5 @@ void checking (int * vector, int dim) {
 	
 	cout << endl << endl << endl;
 }
+
+

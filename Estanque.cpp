@@ -33,6 +33,13 @@ using namespace std;
 void randomVGenerator( int * vector, int dim);
 
 /**
+ * @brief Procedimiento que saca por pantalla el estado (valores internos) del vector
+ * @param El vector ya mencionado
+ * @param Su dimensión
+ */
+void printV( int * vector, int dim);
+
+/**
  * @brief Procedimiento que comprueba el estado final del vector para saber si esta bien ordenado
  * @param El vector ya mencionado
  * @param Su dimensión
@@ -53,9 +60,13 @@ int main () {
 	cout << "Se procede a crear un vector aleatorio con un tamaño predeterminado." << endl;
 	randomVGenerator(vector, dim);
 
+	cout << "Sacamos por pantalla el vector (desordenado)." << endl;
+	printV(vector, dim);
+
 	cout << "Se pone el algoritmo para que ordene el vector y se mide el tiempo de proceso." << endl;
 
 	cout << "Sacamos por pantalla el vector (el resultado)." << endl;
+	printV(vector, dim);
 
 	cout << "Comprobamos si hay algun error poniendo en verde lo que este bien y en rojo lo que no." << endl;
 	checking(vector, dim);
@@ -69,8 +80,23 @@ void randomVGenerator( int * vector, int dim){
 
     for (int i = 0; i < dim; i++){
 
-        vector[i] = rand() % 100 + 1;;
+        vector[i] = rand() % 100 + 1;
     }
+}
+
+void printV( int * vector, int dim) {
+
+//	cout << debug << "Debug: printV()" << restaurar << endl;
+
+    cout << endl;
+
+    for (int i = 0; i < dim; i++){
+
+        cout << vector[i] << " ";
+    }
+
+    cout << endl;
+
 }
 
 void checking (int * vector, int dim) {

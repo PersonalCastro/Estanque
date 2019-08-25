@@ -30,21 +30,26 @@ using namespace std;
  * @param El vector ya mencionado
  * @param Su dimensión
  */
-void randomVGenerator( int * vector, int dim);
+void randomVGenerator( int * vector, int dim );
 
 /**
  * @brief Procedimiento que saca por pantalla el estado (valores internos) del vector
  * @param El vector ya mencionado
  * @param Su dimensión
  */
-void printV( int * vector, int dim);
+void printV( int * vector, int dim );
 
 /**
  * @brief Procedimiento que comprueba el estado final del vector para saber si esta bien ordenado
  * @param El vector ya mencionado
  * @param Su dimensión
  */
-void checking(int * vector, int dim);
+void checking( int * vector, int dim );
+
+
+void rightEstanque( int * vector, int dim, int movePosition );
+void leftEstanque( int * vector, int dim, int movePosition );
+
 
 int main () {
 
@@ -64,6 +69,8 @@ int main () {
 	printV(vector, dim);
 
 	cout << "Se pone el algoritmo para que ordene el vector y se mide el tiempo de proceso." << endl;
+	cout << "\n Procesando\n";
+	rightEstanque(vector, dim, 0);
 
 	cout << "Sacamos por pantalla el vector (el resultado)." << endl;
 	printV(vector, dim);
@@ -74,7 +81,7 @@ int main () {
 }
 
 
-void randomVGenerator( int * vector, int dim){
+void randomVGenerator(int * vector, int dim){
 
 //	cout << debug << "Debug: randomVGenerator()" << restaurar << endl;
 
@@ -84,7 +91,7 @@ void randomVGenerator( int * vector, int dim){
     }
 }
 
-void printV( int * vector, int dim) {
+void printV(int * vector, int dim) {
 
 //	cout << debug << "Debug: printV()" << restaurar << endl;
 
@@ -119,4 +126,46 @@ void checking (int * vector, int dim) {
 	cout << endl << endl << endl;
 }
 
+
+/* ------------------------------------- */
+/* |             Estanque              | */
+/* ------------------------------------- */
+
+void rightEstanque(int * vector, int dim, int movePosition) {
+
+	if (movePosition != (dim - 1)) {
+
+		if (vector[movePosition] > vector[movePosition + 1]) { 
+
+			int aux = 0;
+
+			aux = vector[movePosition];
+			vector[movePosition] = vector[movePosition + 1];
+			vector[movePosition + 1] = aux;
+
+			leftEstanque(vector, dim, movePosition + 1);
+		}
+
+		rightEstanque(vector, dim, movePosition + 1);
+	}
+}
+
+void leftEstanque(int * vector, int dim, int movePosition) {
+
+	if (movePosition != 0) {
+
+		if (vector[movePosition] < vector[movePosition - 1]) { 
+
+			int aux = 0;
+
+			aux = vector[movePosition];
+			vector[movePosition] = vector[movePosition - 1];
+			vector[movePosition - 1] = aux;
+
+			rightEstanque(vector, dim, movePosition - 1);
+		}
+
+		leftEstanque(vector, dim, movePosition - 1);
+	}
+}
 

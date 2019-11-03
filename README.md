@@ -11,72 +11,50 @@ _"Lo que mas me gusto, fue poder ver todas esas ondas creadas a partir de una so
 
 ### Pre-requisitos 📋
 
-
-```
-Da un ejemplo
-```
+Mente abierta: Este algoritmo no solucionara el mundo, pero es divertido pensar de nuevas formas.
 
 ### Instalación 🔧
 
-
-```
-Da un ejemplo
-```
-
-
-```
-hasta finalizar
-```
+Tan sencillo como hacer " $git clone https://github.com/PersonalCastro/Estanque.git " en tu consola.
 
 ## Ejecutando las pruebas ⚙️
 
-
+Analisis de las pruebas en fisico, disculpen las molestias.
 
 ### Analice las pruebas end-to-end 🔩
 
-
-
+Las pruebas se realizan en un equipo virtualizado con las siguientes caracteristicas:
 ```
-Da un ejemplo
+Equipo Físico: 
+* [Portátil MSI GP63 Leopard 8RE-041XES](_https://www.pccomponentes.com/portatil-msi-gp63-leopard-8re-041xes-intel-core-i7-8750h-16gb-1tb-256gb-ssd-gtx-1060-156_)
+
+Maquina Virtual:
+* Programa de Virtualización: Oracle VM VirtualBox (Versión 6.0.10)
+* SO: Distribución Linux (CristoLinux V-DevKit)
+* Memoria Base: 2048 MB
+* Procesador: 2 CPU (Limite de ejecución 100%)
 ```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-
-
-```
-Da un ejemplo
-```
-
-## Deployment 📦
-
-
-## Construido con 🛠️
-
 
 ## Contribuyendo 🖇️
 
 Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-## Wiki 📖
-
-
 ## Versionado 📌
 
+Las diferentes versiones del Proyecto se encuentran en las diferentes ramas.
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **PersonalCastro** - *Trabajo Inicial* - []()
-
+* **Pablo Castro** - *Creador y Diseñador* - [PersonalCastro](https://github.com/PersonalCastro)
 
 ## Licencia 📄
 
+Actualmente con todos los derechos reservados.
 
 ## Expresiones de Gratitud 🎁
 
-
+* Un fuerte agradecimiento a mi profesor Neozizou, el cual me enseño las tecnicas necesarias para programar este humilde algoritmo.
 
 ---
+Plantilla README by...
 ⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
